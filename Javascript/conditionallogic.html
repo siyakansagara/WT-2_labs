@@ -1,0 +1,33 @@
+<!-- Use regex or conditional logic to count vowels and consonants. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+    function countVC(str) {
+  str = str.toLowerCase();
+  let vowels = 0, consonants = 0;
+
+  for (let ch of str) {
+    if (ch >= 'a' && ch <= 'z') { 
+      if ('aeiou'.includes(ch)) {
+        vowels++;
+      }
+      else {
+        consonants++;
+      }
+    }
+  }
+return { 
+    vowels, consonants 
+ }
+}
+console.log(countVC("Hello World"));
+</script>
+ </body>
+ </html>

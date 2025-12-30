@@ -1,0 +1,36 @@
+<!-- write a js function to find and return the longest word and its length. -->
+<!-- write a js function to find first non-reapeating character
+write a js function to compppress string(run-end encoding)ex:"aaabbcccc"->"a3b2c4" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function longestword(str){
+        const word = str.split(/\s+/g); 
+        let long="";
+        let max=0;
+      
+        for(let i=0;i<word.length;i++){
+            const currentword=word[i];
+            if(currentword.length>max){
+                max=currentword.length;
+                long = currentword;
+            }
+        }
+        return {
+            word :long,
+            length : max
+        }
+    } 
+    const str="hello programming";
+    const result = longestword(str);
+    console.log(`longest word in "${result.word}:",length"${result.length}"`);
+    </script>
+</body>
+</html>

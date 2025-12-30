@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    function reverseArrayLoop(arr) {
+    let reversed = []; 
+    for (let i = arr.length - 1; i >= 0; i--) 
+    {
+        reversed.push(arr[i]);
+    }
+    return reversed;
+}
+document.write(reverseArrayLoop([1, 2, 3, 4]));
+
+ </script>
+ <!-- <script>
+    function reverseArrayReduce(arr) {
+    return arr.reduce((acc, value) => {
+        return [value, acc];
+    }, []);
+}
+console.log(reverseArrayLoop([1, 2, 3, 4]));
+
+ </script> -->
+</body>
+</html>

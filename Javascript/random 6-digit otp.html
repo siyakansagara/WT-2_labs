@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+//     function generateNumericOTP() {
+//    return Math.floor(100000 + Math.random() * 900000).toString();
+// }
+
+// document.write(generateNumericOTP());
+function generateRandomCode(type = "numeric") {
+  if (type === "numeric") {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+  } 
+  else if (type === "alphanumeric") {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let pass = "";
+    for (let i = 0; i < 6; i++) {
+      pass += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return pass;
+  } 
+  else {
+    return "Invalid type! Use 'numeric' or 'alphanumeric'.";
+  }
+}
+
+document.write(generateRandomCode("numeric"));        
+document.write(generateRandomCode("alphanumeric"));   
+
+</script>
+</body>
+</html>
