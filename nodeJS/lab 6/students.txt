@@ -1,0 +1,4 @@
+1,riya,ENR001,9876543210,Computer,6.5
+2,Rahul Patel,ENR002,9123456780,IT,4.2
+3,Aditi Shah,ENR003,9988776655,Mechanical,3.8
+4,Neha Mehta,ENR004,9012345678,Civil,7.1
